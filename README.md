@@ -32,7 +32,7 @@ iPhone/iPad 先使用 Safari 連網開啟網站，以分享選單「加入主畫
 
 根目錄的第20版 HTML 是完整遊戲原檔。`docs/game.html` 是內容完全一致的 Pages 遊戲檔；`docs/index.html` 提供學生入口，另有 Service Worker 與安裝資訊供網站離線準備。
 
-`python scripts/build-release.py --site` 產生學生 ZIP 與單一 HTML，並更新 `docs/game.html`；輸出保存在 `.publish/release`。網站入口維護在 `docs`，首次發布時亦可從本機 `.publish/site` 準備目錄複製。若有本機準備目錄，腳本會優先使用它。GitHub Pages 使用 `main` 分支的 `/docs` 目錄。
+`python scripts/build-release.py --site` 產生學生 ZIP 與單一 HTML，並更新 `docs/game.html`；輸出保存在 `.publish/release`。網站入口維護在 `docs`，首次發布時亦可從本機 `.publish/site` 準備目錄複製。若有本機準備目錄，腳本會優先使用它。GitHub Pages 由 `.github/workflows/pages.yml` 發布 `main` 分支的 `docs` 目錄，也可在 Actions 手動執行發布。
 
 下載版本為 `v20.0.0`。製作／檢查暫存檔、原始素材重複檔與個人工作路徑不包含在發佈檔案中。
 
