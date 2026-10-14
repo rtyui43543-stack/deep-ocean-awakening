@@ -4,8 +4,8 @@
 
 - [線上遊玩](https://rtyui43543-stack.github.io/deep-ocean-awakening/)
 - [下載與離線準備](https://rtyui43543-stack.github.io/deep-ocean-awakening/downloads.html)
-- [下載學生離線 ZIP](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v20.0.0/deep-ocean-awakening-v20-offline.zip)
-- [直接下載單一 HTML](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v20.0.0/deep-ocean-awakening-v20-offline.html)
+- [下載學生離線 ZIP](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v21.0.0/deep-ocean-awakening-v21-offline.zip)
+- [直接下載單一 HTML](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v21.0.0/deep-ocean-awakening-v21-offline.html)
 
 ## 電腦離線遊玩
 
@@ -21,7 +21,7 @@ iPhone/iPad 先使用 Safari 連網開啟網站，以分享選單「加入主畫
 
 方向鍵移動，Z 水砲，X 無敵衝刺，P／Esc 暫停。觸控裝置使用畫面下方按鈕。暫停選單提供放棄闖關、返回首頁；已解鎖圖鑑會保留。
 
-第20版強化挑戰模式與技能視覺；遊戲本體與原第20版相同。水砲消耗3能量、冷卻1秒；無敵衝刺消耗5能量、持續2秒、冷卻6秒。
+第21版改善七張海洋圖鑑：四張獨立高解析度插圖、統一畫風、較大字體、金色核心知識與分項重點。滿版封面、關卡與技能規則沿用第20版。水砲消耗3能量、冷卻1秒；無敵衝刺消耗5能量、持續2秒、冷卻6秒。
 
 ## 配樂與海洋資料
 
@@ -31,9 +31,9 @@ iPhone/iPad 先使用 Safari 連網開啟網站，以分享選單「加入主畫
 
 ## 專案與發佈
 
-根目錄的第20版 HTML 是完整遊戲原檔。`docs/index.html` 直接顯示原本的滿版遊戲封面，只增加網站安裝資訊與封面右上的「下載／離線」小入口；遊戲腳本、美術及原有版面不變。`docs/downloads.html` 提供下載及離線準備，舊 `docs/game.html` 網址導向遊戲首頁。
+根目錄的 `21_深海覺醒_海洋圖鑑清晰版.html` 是最新完整遊戲原檔，第20版保留供版本回溯。`docs/index.html` 直接顯示原本的滿版遊戲封面，只增加網站安裝資訊與封面右上的「下載／離線」小入口；遊戲腳本、美術及原有版面不變。`docs/downloads.html` 提供下載及離線準備，舊 `docs/game.html` 網址導向遊戲首頁。
 
 `python scripts/build-site.py` 從原檔更新滿版網站與離線檔案大小檢查，不修改下載版本。`python scripts/build-release.py --site` 另外產生學生 ZIP 與單一 HTML，輸出保存在 `.publish/release`。下載教學與離線功能維護在 `docs`。GitHub Pages 由 `.github/workflows/pages.yml` 發布 `main` 分支的 `docs` 目錄，也可在 Actions 手動執行發布。
 
-下載版本為 `v20.0.0`。製作／檢查暫存檔、原始素材重複檔與個人工作路徑不包含在發佈檔案中。
+下載版本為 `v21.0.0`。製作／檢查暫存檔、原始素材重複檔與個人工作路徑不包含在發佈檔案中。
 

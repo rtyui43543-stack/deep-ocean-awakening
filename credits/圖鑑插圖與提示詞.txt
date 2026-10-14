@@ -1,0 +1,40 @@
+深海覺醒・第21版圖鑑插圖製作記錄
+工具：內建 image_gen（imagegen 技能）。風格參考為既有遊戲封面；不使用真實物種照片作辨識。
+新增：小丑魚、珊瑚、水母、海豚，透明PNG，各1254×1254，圖鑑獨立使用。
+保留：魔鬼魚、梭魚、巨齒鯊原高解析度遊戲素材；所有遊戲中的角色素材不變。
+
+Built-in image_gen, transparent output. Style reference: assets/遊戲封面_珊瑚城堡冒險.png.
+
+Clownfish final prompt:
+Use case: stylized-concept. Asset type: high-resolution educational marine creature card for an existing 3D animated underwater adventure game.
+Reference image: the supplied game cover is ONLY the visual style reference (polished family animation film, rich colors, glossy materials and blue underwater caustic lighting); do not copy its boy, dolphin, castle or composition.
+Create one beautiful complete orange ocellaris clownfish, facing right in a slight three-quarter side view. Anatomically legible rounded fish body, three white vertical bands edged with dark charcoal, all fins intact with delicate visible fin rays, vibrant orange scales, lively but believable glossy eye, naturally small fish mouth. Friendly premium animated-film rendering, not flat cartoon, not low-poly, not photographic taxidermy. Render sharp detailed surface texture at 1024x1024 or higher. Whole fish centered, approximately 82% canvas width; all fins and tail inside frame, modest clear padding. Bright cyan rim light, warm orange key light and subtle water caustics on body; clean crisp silhouette. No humans, no other fish, no background scene, no text, no logo, no watermark, no drop shadow rectangle. Genuine transparent background and preserved alpha. This is a standalone classroom illustration, visibly clear even when displayed at 400px.
+
+Dolphin final prompt:
+Use case: stylized-concept. Asset type: a high-resolution educational dolphin illustration for an existing family-friendly 3D underwater adventure game's marine encyclopedia.
+The supplied image is only the visual style reference: polished 3D animation-film craftsmanship, blue/cyan underwater light, clear appealing rounded shapes and glossy detailed materials. Create a standalone bottlenose dolphin, without the boy or any rider, swimming toward the right in a graceful three-quarter side pose. Show its complete body including recognizable bottle-shaped rostrum, a visible small blowhole on top of the head, one curved dorsal fin, two pectoral flippers and horizontally flattened two-lobed tail flukes. No gills. Friendly eye and natural curved mouth, not a human face. Slate-blue upper body with luminous turquoise highlights and pearl-gray belly, high-end smooth skin with subtle water-caustic reflections, anatomically legible proportions. Crisp sharp texture and edges, cyan rimlight, 1024x1024 or larger. Entire dolphin centered with 8% breathing room, slightly diagonal to use square frame, fills 80% of image, no cropped fins. Real transparent background, no cast-shadow rectangle, no ocean scene, no other animals, no humans, no text or watermarks. Designed to look beautiful and clear at 400px on a dark blue educational card.
+
+
+
+Built-in image_gen; no CLI/API fallback.
+Style reference inspected: assets/遊戲封面_珊瑚城堡冒險.png
+Actual built-in output: both 1254x1254 RGBA PNGs; requested 1024x1024 in prompt, preserved original output without resizing or pixel edits.
+Alpha verified: minimum 0, maximum 255 in both assets; original built-in generated files were copied into this directory.
+
+CORAL — 01_coral.png
+Use case: scientific-educational.
+Asset type: one independent underwater knowledge-card illustration for a children's browser game, 1024 × 1024 pixels, true transparent background.
+Primary request: a compact small coral reef group consisting of a branching staghorn coral colony and one smaller round brain coral on a modest natural rocky base. Show real coral animal structures: on the nearer branching coral, clearly readable tiny individual coral polyps sit in corallites, each with a small central mouth and delicate short tentacles in multiples of six; keep the polyps proportional to the coral branches. The brain coral has continuous meandering ridges and valleys with fine living surface detail. These are natural colonial animals, not flowers or plants.
+Style reference: match the already viewed game cover's polished high-quality 3D animated feature-film look, warm colorful coral and luminous blue ocean lighting, expressive rounded rendering but educationally plausible anatomy. Use the cover only for visual style; do not reproduce its boy, dolphin, castle, or environment.
+Composition: a close three-quarter specimen view, the entire compact colony and base centered, occupying about 80% of a square canvas with generous transparent margins, all branches and the base completely visible, no cropping. This is a specimen cutout, not a full underwater scene.
+Materials and lighting: sharp intricate coral textures, tactile calcium-carbonate skeleton under living tissue, soft cyan underwater caustic highlights and a clean blue rim light. Vibrant coral orange, rose-purple and subtle turquoise accents, with a warm orange branching coral and a purple-and-turquoise brain coral distinguishable at a small display size.
+Constraints: genuine alpha transparency surrounding the organism and inside branch gaps; no background, no seafloor scene, no ocean backdrop, no pedestal, no text, no people, no riders, no fish, no logo, no watermark, no decorative frame, no cartoon eyes or faces. Do not make tentacles into huge anemones or blossoms.
+
+JELLYFISH — 02_jellyfish.png
+Use case: scientific-educational.
+Asset type: one independent jellyfish illustration for an underwater knowledge card in a children's browser game, 1024 × 1024 pixels, true transparent background.
+Primary request: one anatomically plausible natural jellyfish with a soft translucent umbrella-shaped bell. Show a gently domed flexible bell with subtle radial structures; below it are four broad gently ruffled oral arms and multiple finer marginal tentacles emerging from the bell rim, clearly differentiated and flowing gracefully downward. The animal is organic, delicate and softly gelatinous, with no human face, cartoon eyes or smile.
+Style reference: match the already viewed game cover's polished high-quality 3D animated feature-film look, luminous saturated blue/turquoise with warm coral-orange and purple accents, crisp details and soft underwater light. The cover is only a rendering and color reference; do not copy its boy, dolphin, castle, or scene.
+Composition: close three-quarter specimen portrait, a single complete jellyfish centered, the entire bell, oral arms and tips of every tentacle visible, occupying about 80% of a square canvas with safe transparent margins, no cropping. Let the bell remain broad enough to read at knowledge-card size while the arms and tentacles remain distinct. Do not show a whole ocean environment.
+Materials and lighting: glassy but soft watery tissue, realistic translucency, subtle lavender and turquoise color gradients, delicate pale coral accents, soft caustic light on the bell and clean cyan rim lighting, high-quality detailed 3D animation render. No aggressive bloom that obscures anatomy.
+Constraints: genuine alpha-transparent empty background, including between the tentacles; no opaque blue panel, no sea background, no floor, no text, no labels, no people, no riders, no other organisms, no logo, no watermark, no decorative frame, no rigid mechanical shape, no face or eyes.

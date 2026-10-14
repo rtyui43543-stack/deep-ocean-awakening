@@ -1,7 +1,7 @@
 'use strict';
 
-const VERSION = '20.0.1';
-const EXPECTED_GAME_BYTES = 41178065;
+const VERSION = '21.0.0';
+const EXPECTED_GAME_BYTES = 50718277;
 const SCOPE_URL = new URL(self.registration.scope);
 const scopedURL = path => new URL(path, SCOPE_URL).href;
 // Each repository path has its own cache namespace, even on the same GitHub Pages origin.

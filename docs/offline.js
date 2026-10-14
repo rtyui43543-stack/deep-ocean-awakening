@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const CURRENT_VERSION = '20.0.1';
+  const CURRENT_VERSION = '21.0.0';
   const button = document.getElementById('btn-prepare-offline');
   const status = document.getElementById('offline-status');
   if (!button || !status) return;
@@ -22,7 +22,7 @@
   const displayOutdated = () => {
     showingReady = true;
     button.textContent = '更新離線遊戲';
-    show('舊版離線遊戲仍可使用。更新後，主畫面將直接開啟滿版遊戲。請在連網時按「更新離線遊戲」。', 'outdated');
+    show('舊版離線遊戲仍可使用。更新後可使用目前版本的遊戲內容。請在連網時按「更新離線遊戲」。', 'outdated');
   };
   const friendlyError = error => {
     if (error?.name === 'QuotaExceededError') return '裝置的儲存空間不足，請釋放空間後重試。';
@@ -105,7 +105,7 @@
     preparing = true;
     button.disabled = true;
     button.textContent = '準備中…';
-    show('正在準備離線下載，遊戲約 40 MB。請保持此頁開啟。', 'preparing');
+    show('正在準備完整離線遊戲。請保持此頁開啟。', 'preparing');
     try {
       const registration = await navigator.serviceWorker.register('./sw.js', { scope: './', updateViaCache: 'none' });
       const candidate = registration.installing || registration.waiting || registration.active;

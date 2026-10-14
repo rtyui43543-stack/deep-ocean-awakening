@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 parser = argparse.ArgumentParser()
-parser.add_argument("--game", default="20_深海覺醒_挑戰與技能特效強化版.html")
+parser.add_argument("--game", default="21_深海覺醒_海洋圖鑑清晰版.html")
 parser.add_argument("--site", action="store_true", help="Update the full-screen Pages game in docs")
 args = parser.parse_args()
 game_path = ROOT / args.game
@@ -17,12 +17,12 @@ game = game_path.read_bytes()
 stage = ROOT / ".publish"
 release = stage / "release"
 release.mkdir(parents=True, exist_ok=True)
-version = "20.0.0"
-asset_base = "deep-ocean-awakening-v20-offline"
+version = "21.0.0"
+asset_base = "deep-ocean-awakening-v21-offline"
 html_path = release / (asset_base + ".html")
 html_path.write_bytes(game)
 
-instructions = """深海覺醒・海豚騎士的大冒險 第20版
+instructions = """深海覺醒・海豚騎士的大冒險 第21版・海洋圖鑑清晰閱讀
 
 電腦離線遊玩
 1. 完整下載 ZIP，先解壓縮，不要直接在壓縮檔預覽內開啟遊戲。
@@ -31,7 +31,7 @@ instructions = """深海覺醒・海豚騎士的大冒險 第20版
 
 手機與平板
 在下載檔案可由瀏覽器開啟並執行HTML的裝置上，可以開啟上述遊戲檔。
-iPhone/iPad請先連網使用Safari開啟網站，選分享→加入主畫面，再從該圖示開啟，按「準備手機／平板離線遊玩」並等待成功。
+iPhone/iPad請先連網使用Safari開啟網站，選分享→加入主畫面，再從該圖示開啟，在封面右上「下載／離線」按「準備手機／平板離線遊玩」並等待成功。
 Android或其他裝置可先在瀏覽器準備完成，再用安裝/加入主畫面選單；之後從同一個瀏覽器或圖示進入。
 請保留瀏覽器的網站資料；若清除網站資料，需重新連網準備離線內容。
 手機、平板遊戲畫面請橫向使用。圖卡、配樂作者與資料來源的外部連結仍需網路。
@@ -43,7 +43,7 @@ Android或其他裝置可先在瀏覽器準備完成，再用安裝/加入主畫
 
 網站：https://rtyui43543-stack.github.io/deep-ocean-awakening/
 專案：https://github.com/rtyui43543-stack/deep-ocean-awakening
-下載：https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/tag/v20.0.0
+下載：https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/tag/v21.0.0
 
 請保留本包內配樂署名、授權與修改說明；遊戲內「配樂來源」亦可閱讀。
 """
@@ -56,7 +56,7 @@ contents = {
 zip_path = release / (asset_base + ".zip")
 with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
     for name, data in contents.items():
-        info = zipfile.ZipInfo(name, date_time=(2026, 10, 14, 0, 0, 0))
+        info = zipfile.ZipInfo(name, date_time=(2026, 10, 15, 0, 0, 0))
         info.compress_type = zipfile.ZIP_DEFLATED
         info.external_attr = 0o644 << 16
         archive.writestr(info, data, compress_type=zipfile.ZIP_DEFLATED, compresslevel=6)

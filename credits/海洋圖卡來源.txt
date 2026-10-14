@@ -1,6 +1,6 @@
-深海覺醒・第16版海洋知識圖卡資料來源
-查閱日期：2026-10-14
-圖卡文字為繁體中文改寫；插圖取自遊戲素材，不作真實物種照片辨識。
+深海覺醒・第21版海洋知識圖卡資料來源
+查閱日期：2026-10-15
+圖卡文字為繁體中文改寫，重點標示不改變原知識內容。小丑魚、珊瑚、水母、海豚採新製作高解析度3D風格圖鑑插圖；魔鬼魚、梭魚、巨齒鯊使用原清晰遊戲素材。插圖不作真實物種照片辨識。
 
 第一關・小丑魚
 Monterey Bay Aquarium — Clownfish
@@ -33,7 +33,7 @@ https://oceanservice.noaa.gov/facts/dolphin.html
 NOAA Fisheries — Common Bottlenose Dolphin
 https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin
 支持：Tursiops truncatus、溫熱帶近岸至外海棲地、回聲定位找獵物及合作集中魚群。
-水豚騎乘海豚與施放水砲是遊戲想像，並非真實海豚生態。
+角色騎乘海豚與施放水砲是遊戲想像，並非真實海豚生態。
 
 第三關・梭魚
 Florida Museum — Great Barracuda

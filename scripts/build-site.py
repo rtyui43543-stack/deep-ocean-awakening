@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 parser = argparse.ArgumentParser()
-parser.add_argument("--game", default="20_深海覺醒_挑戰與技能特效強化版.html")
+parser.add_argument("--game", default="21_深海覺醒_海洋圖鑑清晰版.html")
 args = parser.parse_args()
 game = (ROOT / args.game).read_bytes()
 head = '''
