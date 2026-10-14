@@ -1,0 +1,8 @@
+.checks/
+.publish/
+assets/
+design-qa.md
+20_更新與驗證.txt
+開始遊戲.txt
+__pycache__/
+*.pyc

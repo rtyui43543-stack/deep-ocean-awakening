@@ -1,0 +1,24 @@
+深海覺醒・第19版選定配樂
+核實與下載日期：2026-10-14
+
+第一、二關
+"Call to Adventure" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License.
+https://creativecommons.org/licenses/by/4.0/
+官方曲目：https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1300022
+官方下載：https://incompetech.com/music/royalty-free/mp3-royaltyfree/Call%20to%20Adventure.mp3
+ISRC：USUAN1300022
+
+第三關
+"Chest of Adventure" — Eldritch Grim
+作者於 OpenGameArt 官方發布頁採 CC0，署名非必要；這裡保留作者與來源作為感謝。
+官方發布：https://opengameart.org/content/chest-of-adventure
+官方下載：https://opengameart.org/sites/default/files/chest_of_adventure.mp3
+授權：https://creativecommons.org/publicdomain/zero/1.0/
+
+遊戲使用修改說明
+下載的原始 MP3 未剪輯或轉碼。
+播放時調整音量，加入淡入淡出、末端循環銜接與危險事件音量避讓。
+两首原音檔各內嵌一次，第一與第二關共同參照 Call to Adventure，第三關參照 Chest of Adventure。
+原始檔案的 SHA-256、長度與 MPEG frame 推算時長見 mp3-metadata.json。
+來源、授權與修改說明也在遊戲內「配樂來源」視窗呈現。

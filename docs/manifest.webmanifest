@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "深海覺醒：海豚騎士的大冒險",
+  "short_name": "深海覺醒",
+  "description": "收集珍珠、施展技能，闖關探索海洋知識。完成離線下載後可在沒有網路時遊玩。",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#061727",
+  "theme_color": "#087fab",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
