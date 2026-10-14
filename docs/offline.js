@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  const CURRENT_VERSION = '20.0.1';
   const button = document.getElementById('btn-prepare-offline');
   const status = document.getElementById('offline-status');
   if (!button || !status) return;
@@ -17,6 +18,11 @@
     showingReady = true;
     button.textContent = '檢查離線更新';
     show('離線遊戲已準備完成。之後請從目前使用的瀏覽器或同一個主畫面圖示進入；清除網站資料後需重新準備。', 'ready');
+  };
+  const displayOutdated = () => {
+    showingReady = true;
+    button.textContent = '更新離線遊戲';
+    show('舊版離線遊戲仍可使用。更新後，主畫面將直接開啟滿版遊戲。請在連網時按「更新離線遊戲」。', 'outdated');
   };
   const friendlyError = error => {
     if (error?.name === 'QuotaExceededError') return '裝置的儲存空間不足，請釋放空間後重試。';
@@ -82,7 +88,8 @@
     if (preparing || !navigator.serviceWorker.controller) return;
     try {
       const result = await send(navigator.serviceWorker.controller, 'CHECK_STATUS');
-      if (result.ready) displayReady();
+      if (result.ready && result.version === CURRENT_VERSION) displayReady();
+      else if (result.ready) displayOutdated();
       else if (showingReady) {
         showingReady = false;
         button.textContent = '準備離線遊玩';
@@ -108,7 +115,7 @@
         const mb = progress.receivedBytes ? `（已下載 ${(progress.receivedBytes / 1048576).toFixed(1)} MB）` : '';
         show(`正在準備 ${progress.completed + 1}/${progress.total}：${progress.label}${mb}。請保持此頁開啟。`, 'preparing');
       });
-      if (!result.ready) throw new Error('未確認完整下載');
+      if (!result.ready || result.version !== CURRENT_VERSION) throw new Error('未確認目前版本完整下載');
       await waitForWorker(worker, true);
       await waitForController(worker);
       displayReady();

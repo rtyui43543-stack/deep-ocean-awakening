@@ -2,7 +2,8 @@
 
 繁體中文海洋冒險遊戲，包含三個關卡、冒險／挑戰兩種模式、珍珠技能與七張海洋知識圖卡。
 
-- [線上遊玩與離線準備](https://rtyui43543-stack.github.io/deep-ocean-awakening/)
+- [線上遊玩](https://rtyui43543-stack.github.io/deep-ocean-awakening/)
+- [下載與離線準備](https://rtyui43543-stack.github.io/deep-ocean-awakening/downloads.html)
 - [下載學生離線 ZIP](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v20.0.0/deep-ocean-awakening-v20-offline.zip)
 - [直接下載單一 HTML](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v20.0.0/deep-ocean-awakening-v20-offline.html)
 
@@ -12,7 +13,7 @@
 
 ## 手機與平板
 
-iPhone/iPad 先使用 Safari 連網開啟網站，以分享選單「加入主畫面」，再從該圖示開啟，按「準備手機／平板離線遊玩」並等待完成。Android 或其他裝置可先在瀏覽器準備完成，再用安裝／加入主畫面選單。之後從同一個瀏覽器或主畫面圖示進入；請保留網站資料，清除後需重新連網準備。遊戲使用橫向畫面，旋轉為直向會暫停。
+iPhone/iPad 先使用 Safari 連網開啟網站，以分享選單「加入主畫面」，再從該圖示開啟，在遊戲封面右上「下載／離線」中按「準備手機／平板離線遊玩」並等待完成。Android 或其他裝置可先在瀏覽器準備完成，再用安裝／加入主畫面選單。之後從同一個瀏覽器或主畫面圖示進入遊戲；請保留網站資料，清除後需重新連網準備。遊戲使用橫向畫面，旋轉為直向會暫停。
 
 本機 HTML 能否直接執行取決於裝置的瀏覽器與檔案開啟方式，因此手機／平板以網站離線準備方式為主。
 
@@ -30,9 +31,9 @@ iPhone/iPad 先使用 Safari 連網開啟網站，以分享選單「加入主畫
 
 ## 專案與發佈
 
-根目錄的第20版 HTML 是完整遊戲原檔。`docs/game.html` 是內容完全一致的 Pages 遊戲檔；`docs/index.html` 提供學生入口，另有 Service Worker 與安裝資訊供網站離線準備。
+根目錄的第20版 HTML 是完整遊戲原檔。`docs/index.html` 直接顯示原本的滿版遊戲封面，只增加網站安裝資訊與封面右上的「下載／離線」小入口；遊戲腳本、美術及原有版面不變。`docs/downloads.html` 提供下載及離線準備，舊 `docs/game.html` 網址導向遊戲首頁。
 
-`python scripts/build-release.py --site` 產生學生 ZIP 與單一 HTML，並更新 `docs/game.html`；輸出保存在 `.publish/release`。網站入口維護在 `docs`，首次發布時亦可從本機 `.publish/site` 準備目錄複製。若有本機準備目錄，腳本會優先使用它。GitHub Pages 由 `.github/workflows/pages.yml` 發布 `main` 分支的 `docs` 目錄，也可在 Actions 手動執行發布。
+`python scripts/build-site.py` 從原檔更新滿版網站與離線檔案大小檢查，不修改下載版本。`python scripts/build-release.py --site` 另外產生學生 ZIP 與單一 HTML，輸出保存在 `.publish/release`。下載教學與離線功能維護在 `docs`。GitHub Pages 由 `.github/workflows/pages.yml` 發布 `main` 分支的 `docs` 目錄，也可在 Actions 手動執行發布。
 
 下載版本為 `v20.0.0`。製作／檢查暫存檔、原始素材重複檔與個人工作路徑不包含在發佈檔案中。
 

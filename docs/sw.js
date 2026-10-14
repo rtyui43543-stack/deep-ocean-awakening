@@ -1,7 +1,7 @@
 'use strict';
 
-const VERSION = '20.0.0';
-const EXPECTED_GAME_BYTES = 41176608;
+const VERSION = '20.0.1';
+const EXPECTED_GAME_BYTES = 41178065;
 const SCOPE_URL = new URL(self.registration.scope);
 const scopedURL = path => new URL(path, SCOPE_URL).href;
 // Each repository path has its own cache namespace, even on the same GitHub Pages origin.
@@ -9,17 +9,17 @@ const CACHE_PREFIX = `deep-ocean-${encodeURIComponent(SCOPE_URL.pathname)}-`;
 const CACHE_NAME = `${CACHE_PREFIX}${VERSION}`;
 const READY_URL = scopedURL('./_offline-ready.json');
 const REQUIRED = [
-  { path: './index.html', label: '冒險入口', mime: /text\/html/i },
-  { path: './game.html', label: '完整遊戲', mime: /text\/html/i, bytes: EXPECTED_GAME_BYTES },
+  { path: './index.html', label: '完整遊戲', mime: /text\/html/i, bytes: EXPECTED_GAME_BYTES },
+  { path: './game.html', label: '舊網址相容入口', mime: /text\/html/i },
+  { path: './downloads.html', label: '下載與離線說明', mime: /text\/html/i },
   { path: './offline.js', label: '離線啟動功能', mime: /(?:java|ecma)script/i },
   { path: './manifest.webmanifest', label: '主畫面設定', mime: /(?:json|manifest)/i },
-  { path: './game-preview.jpg', label: '封面預覽', mime: /image\/jpeg/i },
   { path: './icons/icon-192.png', label: '主畫面圖示', mime: /image\/png/i },
   { path: './icons/icon-512.png', label: '高解析度圖示', mime: /image\/png/i },
   { path: './icons/app-icon.svg', label: '海洋圖示', mime: /image\/svg\+xml/i }
 ];
 const REQUIRED_URLS = REQUIRED.map(asset => scopedURL(asset.path));
-const BOOT_URLS = new Set(['./index.html', './offline.js', './manifest.webmanifest'].map(scopedURL));
+const BOOT_URLS = new Set(['./downloads.html', './offline.js', './manifest.webmanifest'].map(scopedURL));
 let preparation = null;
 const ports = new Set();
 
@@ -173,7 +173,7 @@ self.addEventListener('fetch', event => {
     const ready = await findReadyCache();
     const cached = ready && await ready.cache.match(key);
     if (BOOT_URLS.has(key)) {
-      // The small launcher can show updates online without invalidating a complete offline release.
+      // The small download/settings page can show updates without replacing the cached complete game.
       try {
         const online = await fetch(event.request);
         if (online.ok) return online;

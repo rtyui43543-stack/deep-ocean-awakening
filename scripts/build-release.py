@@ -2,14 +2,15 @@
 import argparse
 import hashlib
 import json
-import shutil
+import subprocess
+import sys
 import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 parser = argparse.ArgumentParser()
 parser.add_argument("--game", default="20_深海覺醒_挑戰與技能特效強化版.html")
-parser.add_argument("--site", action="store_true", help="Copy the complete .publish/site shell to docs")
+parser.add_argument("--site", action="store_true", help="Update the full-screen Pages game in docs")
 args = parser.parse_args()
 game_path = ROOT / args.game
 game = game_path.read_bytes()
@@ -67,11 +68,5 @@ manifest = {"version": version, "game_bytes": len(game), "game_sha256": hashlib.
             "zip_contents": list(contents), "html_asset": html_path.name, "zip_asset": zip_path.name}
 (release / "release-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 if args.site:
-    if (stage / "site" / "index.html").exists():
-        shutil.copytree(stage / "site", ROOT / "docs", dirs_exist_ok=True)
-    else:
-        assert (ROOT / "docs" / "index.html").exists(), "Pages shell docs/index.html is missing"
-    (ROOT / "docs" / "game.html").write_bytes(game)
-    (ROOT / "docs" / ".nojekyll").write_text("", encoding="utf-8")
-    assert (ROOT / "docs" / "game.html").read_bytes() == game
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "build-site.py"), "--game", args.game], check=True)
 print(json.dumps(manifest, ensure_ascii=True))
