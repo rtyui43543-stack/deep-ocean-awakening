@@ -2,13 +2,15 @@
 
 繁體中文海洋冒險遊戲，包含三個關卡、冒險／挑戰兩種模式、珍珠技能與七張海洋知識圖卡。
 
-- [線上遊玩](https://rtyui43543-stack.github.io/deep-ocean-awakening/)
+- [第24版線上遊玩（既有舊快取亦可使用）](https://rtyui43543-stack.github.io/deep-ocean-awakening/play-v24.html)
 - [下載與離線準備](https://rtyui43543-stack.github.io/deep-ocean-awakening/downloads.html)
 - [下載玩家離線 ZIP](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v24.0.0/deep-ocean-awakening-v24-offline.zip)
 - [直接下載單一 HTML](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v24.0.0/deep-ocean-awakening-v24-offline.html)
 - [下載原始完整資料包（含 Word、文字文件與素材索引）](https://github.com/rtyui43543-stack/deep-ocean-awakening/releases/download/v24.0.0/deep-ocean-awakening-v24-complete.zip)
 
-本次只打包與發佈。網站首頁、單檔下載與離線包裡的遊戲 HTML，均與提供的原檔逐位元一致，沒有新增遊戲畫面元素或修改玩法。
+單檔下載與離線包裡的遊戲 HTML 均與提供的原檔逐位元一致。網站只校正頁籤的版本文字，並加入不顯示介面、不重整遊戲的背景更新程式；遊戲畫面、素材、操作及規則保持不變。
+
+若曾儲存第21版離線遊戲，請先開啟上方的第24版專用網址。這個入口可避開舊版工作程式的快取攔截，並在背景更新網站工作程式。之後連網開啟首頁會優先取得已發佈版本；離線仍可使用上一次完整儲存的版本。要將離線遊戲也更新為第24版，請到下載頁按「更新離線遊戲」並等待成功。更新不會清除本機圖鑑資料，也不會強制重整正在進行的遊戲。
 
 ## 電腦離線遊玩
 
@@ -36,11 +38,11 @@
 
 本次來源是 `29_深海覺醒_完整資料包.zip`；內含遊戲為第24版，25～29是文件流水編號。根目錄的 `24_深海覺醒_技能按鈕主題美化.html` 是此次發佈原檔，四份隨附文件原樣保存在 [handoff-v24](handoff-v24/)。完整 ZIP 發佈在 Releases，僅改為便於下載的英文檔名，壓縮檔內容與位元組完全不變。
 
-`docs/index.html` 是原檔的完整複本，沒有注入按鈕、樣式或腳本。`docs/downloads.html` 獨立提供下載及離線準備；舊 `docs/game.html` 網址導向遊戲首頁。原檔頁籤仍顯示「23版」，為遵守原樣發佈而保留。
+`docs/index.html` 與 `docs/play-v24.html` 的遊戲內容來自原檔，僅將頁籤的舊「23版」更正為「24版」，並載入 `site-update.js` 更新既有網站工作程式。沒有新增遊戲按鈕或樣式。`docs/downloads.html` 獨立提供下載及離線準備；舊 `docs/game.html` 網址導向遊戲首頁。原始 HTML 及 Releases 下載包維持原樣，頁籤原有的「23版」亦保留。
 
 遊戲 SHA-256：`4f99402bb8aeb1cbf7833768be52fbfbd2e01ac5335af2c1fd3c24cb146d89ac`。Releases 的 `release-manifest.json` 提供遊戲、兩種 ZIP 及隨附文件校驗值。
 
-`python scripts/build-site.py` 直接複製原檔並更新離線檔案大小檢查。`python scripts/build-release.py --site --source-package "原始完整資料包.zip的路徑"` 產生玩家 ZIP、單檔 HTML、完整資料包及校驗清單，輸出在 `.publish/release-v24`。GitHub Pages 由 `.github/workflows/pages.yml` 發布 `main` 分支的 `docs` 目錄。
+`python scripts/build-site.py` 產生兩個網站入口，並檢查還原頁籤標題及移除更新程式引用後，與原檔完全一致。`python scripts/build-release.py --site --source-package "原始完整資料包.zip的路徑"` 產生玩家 ZIP、單檔 HTML、完整資料包及校驗清單，輸出在 `.publish/release-v24`。GitHub Pages 由 `.github/workflows/pages.yml` 發布 `main` 分支的 `docs` 目錄。
 
-下載版本為 `v24.0.0`。舊版保留供回溯；影片剪輯專案及其他無關工作檔不在此次發佈範圍。
+下載版本為 `v24.0.0`，網站快取流程修正版為 `24.0.1`，遊戲內容同為第24版。舊版保留供回溯；影片剪輯專案及其他無關工作檔不在此次發佈範圍。
 

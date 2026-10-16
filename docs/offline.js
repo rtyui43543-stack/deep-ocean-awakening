@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const CURRENT_VERSION = '24.0.0';
+  const CURRENT_VERSION = '24.0.1';
   const button = document.getElementById('btn-prepare-offline');
   const status = document.getElementById('offline-status');
   if (!button || !status) return;
@@ -17,7 +17,7 @@
   const displayReady = () => {
     showingReady = true;
     button.textContent = '檢查離線更新';
-    show('離線遊戲已準備完成。之後請從目前使用的瀏覽器或同一個主畫面圖示進入；清除網站資料後需重新準備。', 'ready');
+    show('第24版離線遊戲已準備完成。之後請從目前使用的瀏覽器或同一個主畫面圖示進入；清除網站資料後需重新準備。', 'ready');
   };
   const displayOutdated = () => {
     showingReady = true;
@@ -108,6 +108,7 @@
     show('正在準備完整離線遊戲。請保持此頁開啟。', 'preparing');
     try {
       const registration = await navigator.serviceWorker.register('./sw.js', { scope: './', updateViaCache: 'none' });
+      await registration.update();
       const candidate = registration.installing || registration.waiting || registration.active;
       if (!candidate) throw new Error('沒有離線工作程式');
       const worker = await waitForWorker(candidate);

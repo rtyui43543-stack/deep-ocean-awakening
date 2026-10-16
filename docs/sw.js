@@ -1,7 +1,7 @@
 'use strict';
 
-const VERSION = '24.0.0';
-const EXPECTED_GAME_BYTES = 50727406;
+const VERSION = '24.0.1';
+const EXPECTED_GAME_BYTES = 50727463;
 const SCOPE_URL = new URL(self.registration.scope);
 const scopedURL = path => new URL(path, SCOPE_URL).href;
 // Each repository path has its own cache namespace, even on the same GitHub Pages origin.
@@ -13,13 +13,14 @@ const REQUIRED = [
   { path: './game.html', label: '舊網址相容入口', mime: /text\/html/i },
   { path: './downloads.html', label: '下載與離線說明', mime: /text\/html/i },
   { path: './offline.js', label: '離線啟動功能', mime: /(?:java|ecma)script/i },
+  { path: './site-update.js', label: '網站版本更新', mime: /(?:java|ecma)script/i },
   { path: './manifest.webmanifest', label: '主畫面設定', mime: /(?:json|manifest)/i },
   { path: './icons/icon-192.png', label: '主畫面圖示', mime: /image\/png/i },
   { path: './icons/icon-512.png', label: '高解析度圖示', mime: /image\/png/i },
   { path: './icons/app-icon.svg', label: '海洋圖示', mime: /image\/svg\+xml/i }
 ];
 const REQUIRED_URLS = REQUIRED.map(asset => scopedURL(asset.path));
-const BOOT_URLS = new Set(['./downloads.html', './offline.js', './manifest.webmanifest'].map(scopedURL));
+const BOOT_URLS = new Set(['./downloads.html', './offline.js', './site-update.js', './manifest.webmanifest'].map(scopedURL));
 let preparation = null;
 const ports = new Set();
 
@@ -130,8 +131,9 @@ async function prepareOffline() {
 }
 
 self.addEventListener('install', event => {
-  // No automatic 40 MB download. An update does not replace the active release before explicit preparation.
-  event.waitUntil(Promise.resolve());
+  // Switch request handling without reloading any open game. Keep complete offline caches.
+  // A new offline pack is still downloaded only through the explicit prepare action.
+  event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener('activate', event => {
@@ -166,16 +168,17 @@ self.addEventListener('fetch', event => {
   if (requestURL.origin !== SCOPE_URL.origin || !requestURL.href.startsWith(SCOPE_URL.href)) return;
   requestURL.search = '';
   requestURL.hash = '';
-  if (requestURL.href === SCOPE_URL.href) requestURL.href = scopedURL('./index.html');
+  if (requestURL.href === SCOPE_URL.href || requestURL.href === scopedURL('./play-v24.html')) requestURL.href = scopedURL('./index.html');
   const key = requestURL.href;
   if (!REQUIRED_URLS.includes(key)) return;
   event.respondWith((async () => {
     const ready = await findReadyCache();
     const cached = ready && await ready.cache.match(key);
-    if (BOOT_URLS.has(key)) {
-      // The small download/settings page can show updates without replacing the cached complete game.
+    if (key === scopedURL('./index.html') || BOOT_URLS.has(key)) {
+      // Online navigation must reach the published game, even with an older offline cache.
+      // Offline failures fall back to the last complete release; never erase player storage.
       try {
-        const online = await fetch(event.request);
+        const online = await fetch(new Request(key, { cache: 'no-cache', credentials: 'same-origin' }));
         if (online.ok) return online;
         if (cached) return cached;
         return online;

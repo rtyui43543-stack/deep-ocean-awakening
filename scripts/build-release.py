@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 import zipfile
@@ -90,6 +91,10 @@ if args.source_package:
                                     "bytes": len(original), "sha256": digest(original)}
 if args.site:
     subprocess.run([sys.executable, str(ROOT / "scripts" / "build-site.py"), "--game", args.game], check=True)
-    assert (ROOT / "docs" / "index.html").read_bytes() == game
+    homepage = (ROOT / "docs" / "index.html").read_bytes()
+    original_title = re.search(rb'<title>.*?</title>', game).group()
+    restored = re.sub(rb'<title>.*?</title>', lambda _: original_title, homepage, count=1)
+    restored = restored.replace(b'    <script src="./site-update.js" defer></script>\n', b'', 1)
+    assert restored == game
 (release / "release-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 print(json.dumps(manifest, ensure_ascii=True))
