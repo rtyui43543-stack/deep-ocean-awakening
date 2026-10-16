@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const CURRENT_VERSION = '21.0.0';
+  const CURRENT_VERSION = '24.0.0';
   const button = document.getElementById('btn-prepare-offline');
   const status = document.getElementById('offline-status');
   if (!button || !status) return;

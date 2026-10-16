@@ -5,3 +5,4 @@
 *.js text eol=lf
 *.py text eol=lf
 *.webmanifest text eol=lf
+handoff-v24/** -text

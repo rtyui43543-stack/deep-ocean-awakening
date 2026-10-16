@@ -1,0 +1,741 @@
+{
+  "master": "24_深海覺醒_技能按鈕主題美化.html",
+  "master_bytes": 50727406,
+  "master_sha256": "4f99402bb8aeb1cbf7833768be52fbfbd2e01ac5335af2c1fd3c24cb146d89ac",
+  "title": "深海覺醒：海底冒險 (23版・縮小觸控搖桿)",
+  "assets": [
+    {
+      "index": 1,
+      "label": "封面主按鈕底板",
+      "mime": "image/png",
+      "bytes": 821387,
+      "sha256": "ed8939788c564680291ecab345aced578cffbdbf3b6e1ca4d25732005aca239c",
+      "source_line": 705,
+      "width": 1200,
+      "height": 344,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 2,
+      "label": "封面次按鈕底板",
+      "mime": "image/png",
+      "bytes": 312885,
+      "sha256": "301b57ec75b89697d71228b4b297a9d08f8907139c56b24b2923be605d953b05",
+      "source_line": 706,
+      "width": 720,
+      "height": 211,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 3,
+      "label": "封面主視覺",
+      "mime": "image/png",
+      "bytes": 6541150,
+      "sha256": "076b735e628fef7056f061ca2dde9c9a981716a8c6bae46ec47aa7b8ad0611c7",
+      "source_line": 1483,
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGBA",
+      "alpha_min": 200,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 4,
+      "label": "第二關背景",
+      "mime": "image/webp",
+      "bytes": 603560,
+      "sha256": "c3d444d923c4bb77a882671195684b593866179b391ed4b39b68eed454056311",
+      "source_line": 1652,
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "has_transparent_pixels": false
+    },
+    {
+      "index": 5,
+      "label": "第三關背景",
+      "mime": "image/webp",
+      "bytes": 565054,
+      "sha256": "ddecf8dba46e6d4ef619a35cb43f0683ad7012787a105fdc9fc3180d34b3066a",
+      "source_line": 1654,
+      "width": 1920,
+      "height": 1080,
+      "mode": "RGB",
+      "has_transparent_pixels": false
+    },
+    {
+      "index": 6,
+      "label": "第一關背景",
+      "mime": "image/webp",
+      "bytes": 255376,
+      "sha256": "6a26e19aa2d111252583fd50f9c2e56aaeed66ccdde697a2180fda06f0bd7d09",
+      "source_line": 1656,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "has_transparent_pixels": false
+    },
+    {
+      "index": 7,
+      "label": "岩甲巨齒鯊",
+      "mime": "image/png",
+      "bytes": 1451748,
+      "sha256": "82bc0811764d9c26762b5190b91af95a974b27acfbd8afbd0ca76bbf0f2bb813",
+      "source_line": 1660,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 8,
+      "label": "魔鬼魚主素材",
+      "mime": "image/png",
+      "bytes": 753270,
+      "sha256": "032297a82fc362a2ca496a9954b6deadbb4dceeca2c88dfac6335a2f9203cf74",
+      "source_line": 1670,
+      "width": 1672,
+      "height": 941,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 9,
+      "label": "梭魚主素材",
+      "mime": "image/png",
+      "bytes": 1480406,
+      "sha256": "5bffa7bc5350a4130b96e1c235d44eea721c2c5f007f65fd7ad354cde7c58abe",
+      "source_line": 1676,
+      "width": 2172,
+      "height": 724,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 10,
+      "label": "衝刺魚主素材",
+      "mime": "image/png",
+      "bytes": 1077258,
+      "sha256": "4c681283b189768498a1bd6085c4c5880f34ec070214b04c9f609e64ff0307b3",
+      "source_line": 1678,
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 11,
+      "label": "海底岩石",
+      "mime": "image/png",
+      "bytes": 2502328,
+      "sha256": "82b170db4dac1834c97b0f6510be24f862ccfb6bf03d6f8def69db2c3808689f",
+      "source_line": 1680,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 12,
+      "label": "倒掛礁石",
+      "mime": "image/png",
+      "bytes": 2110953,
+      "sha256": "5695b8d8505b8a180b739f358a97686c8b11cf7c27ae533b8e9c3493b577c7c2",
+      "source_line": 1682,
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 13,
+      "label": "配樂：Call to Adventure",
+      "mime": "audio/mpeg",
+      "bytes": 9894055,
+      "sha256": "0e641ec59779e5bf0236eaa2a952f6f050633d6cce49a7bb5ab6802dec970772",
+      "source_line": 1906
+    },
+    {
+      "index": 14,
+      "label": "配樂：Chest of Adventure",
+      "mime": "audio/mpeg",
+      "bytes": 1709705,
+      "sha256": "f72907e4a57484d1e04c263ad2effe8e31a274f4ab9ce2b2ffe33d97446ccd08",
+      "source_line": 1906
+    },
+    {
+      "index": 15,
+      "label": "海豚騎士主角",
+      "mime": "image/png",
+      "bytes": 487812,
+      "sha256": "3f74961467eabfa151a706d6a14a8e33917dcef6c85bb3bc498e4b19e437f63a",
+      "source_line": 2142,
+      "width": 850,
+      "height": 587,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 16,
+      "label": "小丑魚裝飾素材",
+      "mime": "image/png",
+      "bytes": 13525,
+      "sha256": "8003ec4737d716926cf25bbfd0335b1e7d14dd4ee55560ac83d41c478ce44ba1",
+      "source_line": 2868,
+      "width": 100,
+      "height": 57,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 17,
+      "label": "黃色魚裝飾素材",
+      "mime": "image/png",
+      "bytes": 12905,
+      "sha256": "5a0868d4a83fe65f8d79a82fb95ff3054f4514793a42ce49cee4fa0eeb9ad00e",
+      "source_line": 2869,
+      "width": 96,
+      "height": 63,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 18,
+      "label": "藍色魚裝飾素材",
+      "mime": "image/png",
+      "bytes": 16469,
+      "sha256": "fdf361afc9118eef090d222f0228ed52bef5451eca4dc5636cfb9763ef23d7d8",
+      "source_line": 2870,
+      "width": 126,
+      "height": 60,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 19,
+      "label": "危險魚備用素材",
+      "mime": "image/png",
+      "bytes": 21277,
+      "sha256": "b795391b5c142e8e0a4cf0d5e94c7efefcb940b4f345b157b8203c1ba31eaf6a",
+      "source_line": 2871,
+      "width": 198,
+      "height": 46,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 20,
+      "label": "水母主素材",
+      "mime": "image/png",
+      "bytes": 97725,
+      "sha256": "3b4f4d03da67f6f445e3272610a7760e1422e0abed4d51544232312f5bee235a",
+      "source_line": 2872,
+      "width": 185,
+      "height": 226,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 21,
+      "label": "圖鑑：小丑魚",
+      "mime": "image/png",
+      "bytes": 1534581,
+      "sha256": "66136642a431f96df26acda392d95c8b2e10a72e3e55dfb58aabf3efb34447e0",
+      "source_line": 3424,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 22,
+      "label": "圖鑑：珊瑚與珊瑚礁",
+      "mime": "image/png",
+      "bytes": 2679313,
+      "sha256": "8b05dbc6a60be219f6d07c1f349e9a5c8378ab6fb9385f2e8cf88f377b80e1dc",
+      "source_line": 3424,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 23,
+      "label": "圖鑑：水母",
+      "mime": "image/png",
+      "bytes": 1895624,
+      "sha256": "4226198aeec8ba529b926e5cc0f107cd0dbb03330dc8352f7ddb5fdfce9ff3e2",
+      "source_line": 3424,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    },
+    {
+      "index": 24,
+      "label": "圖鑑：海豚",
+      "mime": "image/png",
+      "bytes": 1029515,
+      "sha256": "b6550b8481253190c07dae5042aad7f8d11acdc165f6e660c12ce92a74e24635",
+      "source_line": 3424,
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "has_transparent_pixels": true
+    }
+  ],
+  "counts": {
+    "image/png": 19,
+    "image/webp": 3,
+    "audio/mpeg": 2
+  },
+  "duplicate_ids": [],
+  "external_runtime_resource_attributes": [],
+  "cards": [
+    {
+      "id": "clownfish",
+      "level": 1,
+      "name": "小丑魚",
+      "tag": "海葵的好鄰居",
+      "taxonomy": "雀鯛科・Amphiprion 屬",
+      "habitat": "熱帶印度洋與太平洋的珊瑚礁",
+      "image": "clown",
+      "facts": [
+        "小丑魚常住在海葵的觸手間，利用海葵的保護躲避掠食者。",
+        "牠們吃小型浮游動物，也會吃藻類。",
+        "小丑魚留下的食物碎屑，也能讓海葵受益。"
+      ],
+      "note": "海洋連結：小丑魚與海葵互相幫忙，這種關係叫做共生。",
+      "sources": [
+        {
+          "title": "Monterey Bay Aquarium · Clownfish",
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/clownfish"
+        }
+      ],
+      "headline": "小丑魚與海葵互相幫忙，這種關係叫做共生。",
+      "factLabels": [
+        "安全的家",
+        "牠吃什麼？",
+        "互助的鄰居"
+      ],
+      "factHighlights": [
+        [
+          "海葵的觸手間",
+          "躲避掠食者"
+        ],
+        [
+          "小型浮游動物",
+          "藻類"
+        ],
+        [
+          "食物碎屑",
+          "海葵受益"
+        ]
+      ]
+    },
+    {
+      "id": "coral",
+      "level": 1,
+      "name": "珊瑚與珊瑚礁",
+      "tag": "海洋裡的動物城市",
+      "taxonomy": "刺絲胞動物・珊瑚蟲",
+      "habitat": "淺海珊瑚礁，也有深海珊瑚",
+      "image": "coral",
+      "facts": [
+        "珊瑚是動物！一座珊瑚群體可以由許多小小的珊瑚蟲組成。",
+        "造礁珊瑚累積碳酸鈣骨骼，慢慢形成珊瑚礁。",
+        "珊瑚礁的縫隙提供魚類藏身、覓食與育幼的地方。"
+      ],
+      "note": "守護海洋：海水過熱可能造成珊瑚白化。白化不代表立即死亡，但珊瑚會變得脆弱。",
+      "sources": [
+        {
+          "title": "NOAA · Are corals animals or plants?",
+          "url": "https://oceanservice.noaa.gov/facts/coral.html"
+        },
+        {
+          "title": "NOAA · Coral reef ecosystems",
+          "url": "https://www.noaa.gov/education/resource-collections/marine-life/coral-reef-ecosystems"
+        }
+      ],
+      "headline": "珊瑚是動物！珊瑚礁是許多生物的家。",
+      "factLabels": [
+        "是動物，不是植物",
+        "珊瑚礁怎麼形成？",
+        "魚類的海底家園"
+      ],
+      "factHighlights": [
+        [
+          "珊瑚是動物",
+          "珊瑚蟲"
+        ],
+        [
+          "碳酸鈣骨骼",
+          "形成珊瑚礁"
+        ],
+        [
+          "藏身、覓食與育幼"
+        ]
+      ]
+    },
+    {
+      "id": "jellyfish",
+      "level": 2,
+      "name": "水母",
+      "tag": "柔軟的海中漂流者",
+      "taxonomy": "水母類・刺絲胞動物",
+      "habitat": "世界各地海洋，從海面到深海",
+      "image": "jelly",
+      "facts": [
+        "水母沒有骨頭，也沒有像人類一樣的大腦。",
+        "牠們收縮傘狀身體推動自己，但也常跟著水流漂移。",
+        "許多水母吃浮游動物、小蝦或魚類幼生。"
+      ],
+      "note": "海洋連結：水母也是食物！有些海龜會吃水母，牠們是食物網的一環。",
+      "sources": [
+        {
+          "title": "Monterey Bay Aquarium · Jellies",
+          "url": "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/jellies"
+        }
+      ],
+      "headline": "水母沒有骨頭，也常跟著水流漂移。",
+      "factLabels": [
+        "柔軟的身體",
+        "怎麼移動？",
+        "牠吃什麼？"
+      ],
+      "factHighlights": [
+        [
+          "沒有骨頭",
+          "沒有像人類一樣的大腦"
+        ],
+        [
+          "收縮傘狀身體",
+          "跟著水流漂移"
+        ],
+        [
+          "浮游動物、小蝦或魚類幼生"
+        ]
+      ]
+    },
+    {
+      "id": "manta",
+      "level": 2,
+      "name": "魔鬼魚（蝠鱝）",
+      "tag": "張大嘴巴的濾食高手",
+      "taxonomy": "魟類・巨型蝠鱝 Mobula birostris",
+      "habitat": "熱帶與暖溫帶海洋、沿岸與外海",
+      "image": "manta",
+      "facts": [
+        "寬大的胸鰭像翅膀，讓蝠鱝在水中優雅地游動。",
+        "牠們主要濾食浮游動物，靠鰓濾板留下食物。",
+        "肚子上的斑點各有不同，科學家能用它們辨認個體。"
+      ],
+      "note": "真實的蝠鱝主要濾食浮游動物；遊戲中的迎面衝撞是冒險情節。減少漁業混獲能幫助牠們。",
+      "sources": [
+        {
+          "title": "NOAA Fisheries · Giant Manta Ray",
+          "url": "https://www.fisheries.noaa.gov/species/giant-manta-ray"
+        }
+      ],
+      "headline": "蝠鱝主要濾食浮游動物。",
+      "factLabels": [
+        "水中的大翅膀",
+        "濾食高手",
+        "專屬的斑點"
+      ],
+      "factHighlights": [
+        [
+          "寬大的胸鰭",
+          "像翅膀"
+        ],
+        [
+          "濾食浮游動物",
+          "鰓濾板"
+        ],
+        [
+          "肚子上的斑點",
+          "辨認個體"
+        ]
+      ]
+    },
+    {
+      "id": "dolphin",
+      "level": 3,
+      "name": "海豚",
+      "tag": "用聲音探索海洋",
+      "taxonomy": "海洋哺乳類・以瓶鼻海豚為例",
+      "habitat": "溫帶與熱帶海洋的近岸、河口及外海",
+      "image": "dolphin",
+      "facts": [
+        "海豚是哺乳動物，用肺呼吸，幼豚會喝媽媽的乳汁。",
+        "牠們要浮上海面，透過頭頂的呼吸孔換氣。",
+        "瓶鼻海豚能發出聲音，再利用回聲尋找獵物。"
+      ],
+      "note": "海洋連結：瓶鼻海豚有時會合作，把魚群集中後輪流覓食。",
+      "sources": [
+        {
+          "title": "NOAA · Are dolphins fish?",
+          "url": "https://oceanservice.noaa.gov/facts/dolphin.html"
+        },
+        {
+          "title": "NOAA Fisheries · Common Bottlenose Dolphin",
+          "url": "https://www.fisheries.noaa.gov/species/common-bottlenose-dolphin"
+        }
+      ],
+      "headline": "海豚是哺乳動物，用肺呼吸。",
+      "factLabels": [
+        "不是魚類",
+        "到海面換氣",
+        "用回聲找獵物"
+      ],
+      "factHighlights": [
+        [
+          "哺乳動物",
+          "用肺呼吸",
+          "乳汁"
+        ],
+        [
+          "浮上海面",
+          "呼吸孔"
+        ],
+        [
+          "利用回聲",
+          "尋找獵物"
+        ]
+      ]
+    },
+    {
+      "id": "barracuda",
+      "level": 3,
+      "name": "梭魚",
+      "tag": "流線型的海中獵手",
+      "taxonomy": "梭魚科・以大梭魚 Sphyraena barracuda 為例",
+      "habitat": "熱帶與亞熱帶近岸、珊瑚礁及外海",
+      "image": "barracuda",
+      "facts": [
+        "細長、流線型的身體，適合快速衝向獵物。",
+        "大梭魚主要靠視覺找食物，吃許多不同種類的魚。",
+        "幼魚常在紅樹林與海草床長大，利用植物遮蔽自己。"
+      ],
+      "note": "海洋連結：保護紅樹林和海草床，也是在保護小魚的成長基地。",
+      "sources": [
+        {
+          "title": "Florida Museum · Great Barracuda",
+          "url": "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/great-barracuda/"
+        }
+      ],
+      "headline": "梭魚的流線型身體，適合快速衝向獵物。",
+      "factLabels": [
+        "速度的祕密",
+        "用眼睛找食物",
+        "幼魚的成長基地"
+      ],
+      "factHighlights": [
+        [
+          "流線型",
+          "快速衝向獵物"
+        ],
+        [
+          "靠視覺",
+          "吃許多不同種類的魚"
+        ],
+        [
+          "紅樹林與海草床",
+          "遮蔽自己"
+        ]
+      ]
+    },
+    {
+      "id": "megalodon",
+      "level": 3,
+      "name": "巨齒鯊",
+      "tag": "已滅絕的遠古巨鯊",
+      "taxonomy": "遠古鯊魚・Otodus megalodon",
+      "habitat": "約 2,000 萬至 360 萬年前的海洋",
+      "image": "megalodon",
+      "facts": [
+        "巨齒鯊已在約 360 萬年前滅絕，今天的海洋裡沒有牠。",
+        "牠的三角形鋸齒牙齒，最大可接近 18 公分。",
+        "牠會吃鯨、大魚與其他鯊魚；化石牙齒留下了線索。"
+      ],
+      "note": "冒險想像：岩甲、紅眼和發光裂紋是遊戲設計，並非巨齒鯊的真實特徵。",
+      "sources": [
+        {
+          "title": "Natural History Museum · Is megalodon still alive?",
+          "url": "https://www.nhm.ac.uk/discover/is-megalodon-still-alive.html"
+        }
+      ],
+      "headline": "巨齒鯊約 360 萬年前已滅絕，今天的海洋裡沒有牠。",
+      "factLabels": [
+        "已經滅絕",
+        "巨大的牙齒",
+        "化石留下的線索"
+      ],
+      "factHighlights": [
+        [
+          "360 萬年前滅絕",
+          "沒有牠"
+        ],
+        [
+          "三角形鋸齒牙齒",
+          "18 公分"
+        ],
+        [
+          "鯨、大魚與其他鯊魚",
+          "化石牙齒"
+        ]
+      ]
+    }
+  ],
+  "music": [
+    {
+      "key": "call",
+      "name": "Call to Adventure",
+      "artist": "Kevin MacLeod",
+      "duration": 247.24898,
+      "filename": "Call_to_Adventure_Kevin_MacLeod.mp3",
+      "source": "https://incompetech.com/music/royalty-free/index.html?Search=Search&isrc=USUAN1300022",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "key": "chest",
+      "name": "Chest of Adventure",
+      "artist": "Eldritch Grim",
+      "duration": 106.86694,
+      "filename": "Chest_of_Adventure_Eldritch_Grim.mp3",
+      "source": "https://opengameart.org/content/chest-of-adventure",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "versions": [
+    {
+      "filename": "開始遊戲(1).html",
+      "bytes": 50716820,
+      "sha256": "3dd6461fad953349e0d81cb3c2013305781d9f06c19c98494ccb7c0fbed053bf"
+    },
+    {
+      "filename": "22_深海覺醒_手機平板虛擬搖桿.html",
+      "bytes": 50720464,
+      "sha256": "e35857bbb339fa50e745b0b5b0ffc376b7846ca3e6c2af674b36353c9116c02f"
+    },
+    {
+      "filename": "23_深海覺醒_縮小手機平板搖桿.html",
+      "bytes": 50720464,
+      "sha256": "87aeca94b1cbdbf1b8caa55609c9a51cd4a9c406d7f864b5957c763ce4b0f2f5"
+    },
+    {
+      "filename": "24_深海覺醒_技能按鈕主題美化.html",
+      "bytes": 50727406,
+      "sha256": "4f99402bb8aeb1cbf7833768be52fbfbd2e01ac5335af2c1fd3c24cb146d89ac"
+    }
+  ],
+  "archive_policy": "以第24版為主檔；不修改內容。資料包不重複放入舊版大檔及同內容的百分比編碼檔名副本。",
+  "checks": {
+    "javascript_syntax": "node --check 通過",
+    "html_duplicate_ids": [],
+    "embedded_images_decoded": 22,
+    "embedded_audio_base64_decoded": 2,
+    "v24_vs_v23": "去除第24版新增的 CSS 區塊後逐字相同；JavaScript 完全相同",
+    "browser_status": "已擷取桌面模擬封面與三關畫面；完整自動化檢查逾時，未完成跨裝置測試。",
+    "not_verified": [
+      "實際 Android content:// 開啟",
+      "實際 file:// 開啟",
+      "iOS/iPadOS 開啟",
+      "雙手多點觸控",
+      "配樂與音效實際聽測",
+      "本機收藏跨次開啟持續性",
+      "完整闖關及全部裝置相容性"
+    ],
+    "external_sources": "僅保留原檔內建來源與授權標示，本次未另作網路查核。"
+  },
+  "source_locations": {
+    "ui": "主檔 L1436–1625：HUD、技能按鈕、封面、暫停、結算、圖鑑與配樂來源介面。",
+    "rules": "主檔 L1693–1731、L2190–2311：難度、技能常數、角色、生命與能量。",
+    "score": "主檔 L2741–2811、L4100–4376：擊潰、閃避、收集、回血與碰撞。",
+    "levels": "主檔 L1693–1731、L3312–3389、L4100–4376：速度、出口、各關生成與突襲。",
+    "hazards": "主檔 L2972–3310、L4100–4376：危險生物、水流與巨齒鯊事件。",
+    "controls": "主檔 L180–206、L2190–2229、L3889–3999：按鈕切換、移動、键盤與搖桿事件。",
+    "cards": "主檔 L3392：OCEAN_CARDS 圖鑑原文；L3394–3658：解鎖、儲存、閱讀與切換。",
+    "reset": "主檔 L3672–3852、L3992–4039：新局、重試、過關、暫停與返回首頁。",
+    "music": "主檔 L1603–1617、L1733–2124：來源署名、內嵌音訊、配樂與音效控制。",
+    "assets": "主檔內嵌 data URL 逐筆解碼；完整位置、尺寸與 SHA-256 見 27_深海覺醒_素材與程式索引.json。",
+    "version": "本對話第21版基底及第22／23／24版實檔差異比對；第24版新增樣式位於 L1264–1431。",
+    "check": "本次靜態檢查與部分 Chromium 畫面載入紀錄；不等同實際手機／平板完整驗收。"
+  },
+  "game_constants": {
+    "canvas": [
+      1280,
+      720
+    ],
+    "lives": 3,
+    "max_lives": 3,
+    "initial_energy": 0,
+    "max_energy": 10,
+    "pearl_target_ui": 5,
+    "pearl_points": 10,
+    "pearl_energy": 1,
+    "water_cost": 3,
+    "water_cooldown_ms": 1000,
+    "dash_cost": 5,
+    "dash_cooldown_ms": 6000,
+    "dash_duration_ms": 2000,
+    "dash_multiplier": 1.6,
+    "level_distance": 18000,
+    "easy_scroll_speed": 300,
+    "hard_scroll_multiplier": 1.35,
+    "joystick_width_css": "clamp(68px, 10.4vw, 98px)",
+    "joystick_knob_width": "43%",
+    "joystick_dead_zone_per_axis": 0.18,
+    "third_level_requires_pearl_target": false
+  },
+  "ocean_card_image_mapping": {
+    "clownfish": "OCEAN_CARD_IMAGES.clownfish",
+    "coral": "OCEAN_CARD_IMAGES.coral",
+    "jellyfish": "OCEAN_CARD_IMAGES.jellyfish",
+    "manta": "mantaSprite.src",
+    "dolphin": "OCEAN_CARD_IMAGES.dolphin",
+    "barracuda": "marineSprites.barracuda.src",
+    "megalodon": "megalodonSprite.src"
+  }
+}
